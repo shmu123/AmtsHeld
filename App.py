@@ -17,7 +17,7 @@ with st.sidebar:
 # Die Funktion, die Google fragt
 def frage_google(bild, befehl, key):
     genai.configure(api_key=key)
-    model = genai.GenerativeModel('gemini-1.5-pro')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     antwort = model.generate_content([befehl, bild])
     return antwort.text
 
